@@ -11,7 +11,7 @@ public class Job extends AbstractEntity{
 
 
 
-    @ManyToOnegit
+    @ManyToOne
     private Employer employer;
 
     @ManyToMany
