@@ -22,4 +22,5 @@ DROP TABLE techjobs2.job;
 ## Part 4: Test it with SQL
 
 SELECT name, skills FROM techjobs2.job
-WHERE skills IS NOT NULL;
+WHERE skills IS NOT NULL
+ORDER BY skills ASC;
