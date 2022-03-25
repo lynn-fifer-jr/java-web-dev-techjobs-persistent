@@ -1,9 +1,6 @@
 ## Part 1: Test it with SQL
 
 SELECT
-TABLE_CATALOG,
-TABLE_SCHEMA,
-TABLE_NAME,
 COLUMN_NAME,
 DATA_TYPE
 FROM INFORMATION_SCHEMA.COLUMNS
@@ -21,6 +18,6 @@ DROP TABLE techjobs2.job;
 
 ## Part 4: Test it with SQL
 
-SELECT name, skills FROM techjobs2.job
-WHERE skills IS NOT NULL
-ORDER BY skills ASC;
+SELECT * FROM techjobs2.skill
+INNER JOIN job_skills ON skill.id = job_skills.skills_id
+WHERE job_skills.jobs_id IS NOT NULL
